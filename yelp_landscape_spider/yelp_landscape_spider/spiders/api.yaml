@@ -1,0 +1,17 @@
+search_list_info:
+  method: 'GET'
+  url: 'https://www.yelp.com/search?find_desc={target}&find_loc={area}&start={page_num}0'
+  headers: {'user-agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
+             }
+
+xpath_info:
+  base: '/html/body/yelp-react-root/div[1]/div[3]/div/div[1]/div[1]/div[2]/div/ul/li[{item_num}]/div/div/div/div[2]'
+  name: '/div[1]/div/div[1]/div/div[1]/div/div/h4/span/a/text()'
+  rating: '/div[1]/div/div[1]/div/div[2]/div/div/div[1]/span/div/@aria-label'
+  num_of_reviews: '/div[1]/div/div[1]/div/div[2]/div/div/div[2]/span/text()'
+  address: '/div[1]/div/div[2]/div/address/div/div/div/p/span/text()'
+  district: '/div[1]/div/div[2]/div/div/div/div/div/p/text()'
+  contact_info: '/div[1]/div/div[2]/div/div[1]/div/div/p/text()'
+  description: '/div[1]/div/div[1]/div/div[3]/div/div/span/span/span/a/text()'
+  detail: '/div[2]/div/div/div/div/p/text()'
+
